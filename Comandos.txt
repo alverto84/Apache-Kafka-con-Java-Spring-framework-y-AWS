@@ -1,0 +1,11 @@
+
+
+Arrancar zookeaper: c:/kafka .\bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+Arrancar zookeaper y kafka: .\bin\windows\kafka-server-start.bat config\server.properties
+
+Crear un topic: .\bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --create --topic devs4g-topic  --partitions 5 --replication-factor 1
+
+Crear un consumer: .\bin\windows\kafka-console-consumer.bat --topic devs4g-topic --from-beginning --bootstrap-server localhost:9092
+
+Crear un producer: .\bin\windows\kafka-console-producer.bat --topic devs4g-topic --bootstrap-server localhost:9092
